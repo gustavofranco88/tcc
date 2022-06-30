@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/tcc/agenda/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/tcc/agenda/app/src/main/res/layout/activity_tela1.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/tcc/agenda/app/src/main/res/layout/fragment_agendamento.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/tcc/agenda/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/tcc/agenda/app/src/main/res/layout/fragment_perfil.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/tcc/agenda/app/src/main/res/layout/item_agendamento.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/tcc/agenda/app/src/main/res/menu/navigation.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Asus/OneDrive - UNIVERSIDADE TUIUTI DO PARANA/Documentos/programacao-mobile/agenda/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1945" />
         <entry key="..\:/Users/Asus/OneDrive - UNIVERSIDADE TUIUTI DO PARANA/Documentos/programacao-mobile/agenda/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1735" />
         <entry key="..\:/Users/Asus/OneDrive - UNIVERSIDADE TUIUTI DO PARANA/Documentos/programacao-mobile/agenda/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1735" />

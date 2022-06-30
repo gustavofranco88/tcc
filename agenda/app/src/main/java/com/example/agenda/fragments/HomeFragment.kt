@@ -27,21 +27,13 @@ class HomeFragment : Fragment() {
     ): View? {
         mBinding = FragmentHomeBinding.inflate(inflater, container, false)
 
-
-//        val agendamentos = listOf<Agendamento>(
-//            Agendamento("Gustavo", "675757","maquiagem", "4/3/22", "10:00" ),
-//            Agendamento("Gustavo", "675757","maquiagem", "4/3/22", "10:00" ),
-//            Agendamento("Gustavo", "675757","maquiagem", "4/3/22", "10:00" ),
-//            Agendamento("Gustavo", "675757","maquiagem", "4/3/22", "10:00" ),
-//        )
-
-        val call = NetworkManager.service.listarAgendamentos()
-        call.enqueue(object: Callback<List<Agendamento>>{
-            override fun onResponse(
-                call: Call<List<Agendamento>>,
-                response: Response<List<Agendamento>>
-            ) {
-                tratarResposta(response.body())
+            val call = NetworkManager.service.listarAgendamentos()
+            call.enqueue(object : Callback<List<Agendamento>> {
+                override fun onResponse(
+                    call: Call<List<Agendamento>>,
+                    response: Response<List<Agendamento>>
+                ) {
+                    tratarResposta(response.body())
             }
 
             override fun onFailure(call: Call<List<Agendamento>>, t: Throwable) {

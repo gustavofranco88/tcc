@@ -6,4 +6,8 @@ data class Agendamento (
     var servico: String,
     var data: String,
     var hora: String,
-)
+) {
+    fun addAll(body: Agendamento) {
+        TODO("Not yet implemented")
+    }
+}

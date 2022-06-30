@@ -1,15 +1,22 @@
 package com.example.agenda.network
 
 import com.example.agenda.models.Agendamento
+import com.example.agenda.models.Serviço
 import retrofit2.Call
-import retrofit2.http.GET
+import retrofit2.http.*
 
 
 interface ApiServices {
 
 
-@GET("listaagendamentos")
-fun listarAgendamentos(): Call<List<Agendamento>>
+
+    @GET("listaagendamentos")
+    fun listarAgendamentos(): Call<List<Agendamento>>
+
+
+    @POST("listaagendamentos")
+    fun agendarServiço(@Body novoAgendamento: Agendamento): Call<List<Agendamento>>
+
 //
 //// Outro exemplo
 //// http://services.koruthos.com.br/tecplus/curso_extensao/all?pagina={pagina}&tamanho={tamanho}

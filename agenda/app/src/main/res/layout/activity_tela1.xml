@@ -91,7 +91,7 @@
         </LinearLayout>
 
         <Button
-
+            android:id="@+id/btn_ok"
             android:layout_width="13dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
