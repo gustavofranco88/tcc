@@ -5,7 +5,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private val URL = "https://listaagendamentos.free.beeceptor.com/"
+private val URL = "https://8668-2001-1284-f013-3585-e563-e218-8b8f-dbe5.sa.ngrok.io/"
 
 object NetworkManager {
 

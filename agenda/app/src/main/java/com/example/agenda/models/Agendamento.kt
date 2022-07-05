@@ -7,7 +7,7 @@ data class Agendamento (
     var data: String,
     var hora: String,
 ) {
-    fun addAll(body: Agendamento) {
+    fun addAll(body: List<Agendamento>) {
         TODO("Not yet implemented")
     }
 }

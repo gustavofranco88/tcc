@@ -1,5 +1,6 @@
 package com.example.agenda.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -36,9 +37,9 @@ class HomeFragment : Fragment() {
                     tratarResposta(response.body())
             }
 
-            override fun onFailure(call: Call<List<Agendamento>>, t: Throwable) {
+                override fun onFailure(call: Call<List<Agendamento>>, t: Throwable) {
                 Toast.makeText(context, "Erro", Toast.LENGTH_SHORT).show()
-                //TODO("Not yet implemented")
+
             }
 
         })
@@ -49,7 +50,7 @@ class HomeFragment : Fragment() {
         mBinding.homeRecycler.adapter = AgendamentosAdaptersRecycler(
             agendamentos, object : AgendamentosAdaptersRecycler.Evento {
                 override fun onCompartilharClick(agendamento: Agendamento) {
-                    Toast.makeText(context, "${agendamento.nome}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, agendamento.nome, Toast.LENGTH_SHORT).show()
                 }
 
             }
@@ -57,6 +58,7 @@ class HomeFragment : Fragment() {
 
         return mBinding.root
     }
+
 
     private fun tratarResposta(body: List<Agendamento>?) {
         agendamentos.addAll(body!!)

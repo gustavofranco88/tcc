@@ -10,12 +10,12 @@ interface ApiServices {
 
 
 
-    @GET("listaagendamentos")
+    @GET("todo/")
     fun listarAgendamentos(): Call<List<Agendamento>>
 
 
-    @POST("listaagendamentos")
-    fun agendarServiço(@Body novoAgendamento: Agendamento): Call<List<Agendamento>>
+    @POST("todo/")
+    fun agendarServiço(@Body novoAgendamento: Agendamento): Call<List<Agendamento>?>
 
 //
 //// Outro exemplo
