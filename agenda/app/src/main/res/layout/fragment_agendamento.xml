@@ -13,7 +13,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+
             android:layout_gravity="center">
 
             <EditText
@@ -36,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Agendar"
+               android:hint="AGENDAR"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -67,52 +68,60 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextPhone_agendar" />
 
             <EditText
-                android:id="@+id/editTextDate"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:ems="10"
-                android:hint="Data"
-                android:inputType="date"
-                app:layout_constraintEnd_toStartOf="@+id/editTextTime"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
-
-            <EditText
                 android:id="@+id/editTextTime"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginTop="76dp"
                 android:ems="10"
                 android:hint="Hora"
                 android:inputType="time"
-                app:layout_constraintBottom_toBottomOf="@+id/editTextDate"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-                app:layout_constraintStart_toEndOf="@+id/editTextDate"
-                app:layout_constraintTop_toTopOf="@+id/editTextDate" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+            <TextView
+                android:id="@+id/textView_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dataescolhida"
+                app:layout_constraintEnd_toEndOf="@+id/btn_Data"
+                app:layout_constraintStart_toStartOf="@+id/btn_Data"
+                app:layout_constraintTop_toBottomOf="@+id/btn_Data" />
+
+            <Button
+                android:id="@+id/btn_Data"
+                android:layout_width="79dp"
+                android:layout_height="42dp"
+                android:layout_margin="16dp"
+                android:background="@color/white"
+                android:drawableBottom="@drawable/ic_baseline_calendar"
+                android:text="data"
+                app:layout_constraintEnd_toEndOf="@+id/btn_limpar"
+                app:layout_constraintHorizontal_bias="0.461"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
             <Button
                 android:id="@+id/btn_limpar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="10dp"
+                android:layout_width="140dp"
+                android:layout_height="47dp"
+                android:layout_margin="32dp"
                 android:text="Limpar"
-                app:layout_constraintEnd_toStartOf="@id/btn_salvar"
-                app:layout_constraintStart_toStartOf="@+id/editTextDate"
-                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+                app:layout_constraintBottom_toBottomOf="@id/btn_Data"
+                app:layout_constraintEnd_toStartOf="@+id/btn_salvar"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/btn_salvar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin = "24dp"
                 android:text="Salvar"
-                app:layout_constraintBottom_toBottomOf="@id/btn_limpar"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTime"
-                app:layout_constraintStart_toEndOf="@id/btn_limpar"
-                app:layout_constraintTop_toTopOf="@id/btn_limpar" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTime" />
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
