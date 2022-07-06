@@ -30,6 +30,7 @@ class AgendamentoFragment : Fragment() {
         mBinding.btnData.setOnClickListener {
             DatePickerFragment { result ->mBinding.textViewData.text = result }
                 .show(childFragmentManager,"datePicker")
+
         }
         mBinding.btnSalvar.setOnClickListener {
 
@@ -39,7 +40,7 @@ class AgendamentoFragment : Fragment() {
             novoAgendamento.nome = mBinding.editTextTextPersonNameNome.text.toString()
             novoAgendamento.telefone = mBinding.editTextPhoneAgendar.text.toString()
             novoAgendamento.servico = mBinding.editTextTextPersonName2.text.toString()
-            novoAgendamento.data = mBinding.editTextTime.text.toString()
+            novoAgendamento.data = mBinding.textViewData.text.toString()
             novoAgendamento.hora = mBinding.editTextTime.text.toString()
 
 
