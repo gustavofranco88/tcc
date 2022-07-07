@@ -2,6 +2,6 @@
     <string name="app_name">AGENDA</string>
     <string name="main_nav_home">Home</string>
     <string name="main_nav_agendar">Agenda</string>
-    <string name="main_nav_agendamento">agendamento</string>
+    <string name="main_nav_agendamento">Agendar</string>
     <string name="main_nav_perfil">Perfil</string>
 </resources>
