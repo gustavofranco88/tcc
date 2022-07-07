@@ -27,7 +27,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         mBinding = FragmentHomeBinding.inflate(inflater, container, false)
-
+            agendamentos.clear()
             val call = NetworkManager.service.listarAgendamentos()
             call.enqueue(object : Callback<List<Agendamento>> {
                 override fun onResponse(

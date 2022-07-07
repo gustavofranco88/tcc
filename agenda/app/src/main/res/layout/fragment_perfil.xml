@@ -16,176 +16,84 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".activities.MainActivity"
+            android:padding="16dp"
             android:layout_gravity="center">
-
-            <TextView
-                android:id="@+id/textView_userbirth"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="20dp"
-                android:text="08/05/2003"
-                android:textColor="#000000"
-                android:textColorHighlight="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_datanascimento" />
-
-            <TextView
-                android:id="@+id/textView_datanascimento"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="20dp"
-                android:text="Data de Nascimento"
-                android:textColor="#858585"
-                android:textColorHighlight="#000000"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_userphone" />
-
-            <TextView
-                android:id="@+id/textView_userphone"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="20dp"
-                android:text="(41)8456-8569"
-                android:textColor="#000000"
-                android:textColorHighlight="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_telefone" />
-
-            <TextView
-                android:id="@+id/textView_telefone"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="20dp"
-                android:text="Telefone"
-                android:textColor="#858585"
-                android:textColorHighlight="#000000"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_useremail" />
-
-            <TextView
-                android:id="@+id/textView_useremail"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="20dp"
-                android:text="fabiano@email.com.br"
-                android:textColor="#000000"
-                android:textColorHighlight="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_email" />
-
-            <TextView
-                android:id="@+id/textView_email"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="20dp"
-                android:text="Email"
-                android:textColor="#858585"
-                android:textColorHighlight="#000000"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_username" />
 
             <TextView
                 android:id="@+id/textView_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Perfil"
-                android:textSize="30sp"
+                android:text="Olá"
+                android:textSize="48sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView_profile"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="25dp"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputlayout_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:hint="Nome"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_profile"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toBottomOf="@+id/textView_profile">
 
-            <TextView
-                android:id="@+id/textView_nome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:text="Nome"
-                android:textColor="#858585"
-                android:textColorHighlight="#000000"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView_profile" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:background="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/textView_username"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputlayout_senha"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
-                android:text="Fabiano"
-                android:textColor="#000000"
-                android:textColorHighlight="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_nome" />
-
-            <TextView
-                android:id="@+id/textView_cadastro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="Ainda não tem um Cadastro?"
-                android:textColor="#000000"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:hint="Senha"
+                app:endIconMode="password_toggle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_userbirth" />
+                app:layout_constraintTop_toBottomOf="@+id/textinputlayout_nome">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:background="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <Button
-                android:id="@+id/button_cadastro"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/purple_200"
-                android:inputType="text"
-                android:scrollbarSize="4dp"
-                android:text="Cadastre-se"
-                android:textColor="#FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/btn_Login"
+                android:layout_width="174dp"
+                android:layout_height="52dp"
+                android:layout_margin="48dp"
+                android:text="Login"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_cadastro"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/textinputlayout_senha" />
+
+            <Button
+                android:id="@+id/btn_Cadastrar"
+                android:layout_width="174dp"
+                android:layout_height="52dp"
+                android:layout_margin="36dp"
+                android:text="Cadastrar"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_Login" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -2,6 +2,7 @@ package com.example.agenda.network
 
 import com.example.agenda.models.Agendamento
 import com.example.agenda.models.Serviço
+import com.example.agenda.models.Usuário
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -16,6 +17,9 @@ interface ApiServices {
 
     @POST("todo/")
     fun agendarServiço(@Body novoAgendamento: Agendamento): Call<List<Agendamento>?>
+
+    @POST("todo/")
+    fun novoUsuario(@Body novoUsuário: Usuário): Call<List<Usuário>?>
 
 //
 //// Outro exemplo

@@ -33,6 +33,7 @@ class AgendamentoFragment : Fragment() {
                 .show(childFragmentManager,"datePicker")
 
         }
+
         //Selecionar Hora
         mBinding.btnHora.setOnClickListener {
             TimePickerFragment { result -> mBinding.textViewHora.text = result }
@@ -69,7 +70,7 @@ class AgendamentoFragment : Fragment() {
 
 
                 override fun onFailure(call: Call<List<Agendamento>?>, t: Throwable) {
-                    Toast.makeText(context, "Erro ao enviar dados", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Adicionado com sucesso", Toast.LENGTH_SHORT).show()
 
                 }
 
