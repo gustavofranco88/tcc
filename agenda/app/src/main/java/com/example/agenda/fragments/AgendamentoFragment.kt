@@ -27,15 +27,19 @@ class AgendamentoFragment : Fragment() {
     ): View? {
         mBinding = FragmentAgendamentoBinding.inflate(inflater, container, false)
 
+        //Selecionar Data
         mBinding.btnData.setOnClickListener {
             DatePickerFragment { result ->mBinding.textViewData.text = result }
                 .show(childFragmentManager,"datePicker")
 
         }
+        //Selecionar Hora
         mBinding.btnHora.setOnClickListener {
             TimePickerFragment { result -> mBinding.textViewHora.text = result }
                 .show(childFragmentManager,"timePicker")
         }
+
+        //Salvar dados e enviar para banco de dados
         mBinding.btnSalvar.setOnClickListener {
 
             novoAgendamento = Agendamento(
@@ -71,9 +75,12 @@ class AgendamentoFragment : Fragment() {
 
             })
         }
+
+        //Limpar Formulario
         mBinding.btnLimpar.setOnClickListener {
-            var nome = mBinding.editTextTextPersonNameNome.text.toString()
-                nome = ""
+            mBinding.editTextTextPersonNameNome.text.clear()
+            mBinding.editTextTextPersonName2.text.clear()
+            mBinding.editTextPhoneAgendar.text.clear()
         }
 
 
