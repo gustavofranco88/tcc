@@ -27,6 +27,7 @@
                 android:ems="10"
                 android:hint="Nome"
                 android:inputType="textPersonName"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +38,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-               android:hint="AGENDAR"
+                android:text="AGENDAR"
+                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -50,6 +53,7 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Telefone"
+                android:textStyle="bold"
                 android:inputType="phone"
                 app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName_nome"
                 app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName_nome"
@@ -62,30 +66,19 @@
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="Serviço"
+                android:textStyle="bold"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="@+id/editTextPhone_agendar"
                 app:layout_constraintStart_toStartOf="@+id/editTextPhone_agendar"
                 app:layout_constraintTop_toBottomOf="@+id/editTextPhone_agendar" />
-
-            <EditText
-                android:id="@+id/editTextTime"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="120dp"
-                android:ems="10"
-                android:hint="Hora"
-                android:inputType="time"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
-
 
 
             <TextView
                 android:id="@+id/textView_data"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="dataescolhida"
-                android:inputType="date"
+                android:text="Escoler data"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/btn_Data"
                 app:layout_constraintStart_toStartOf="@+id/btn_Data"
                 app:layout_constraintTop_toBottomOf="@+id/btn_Data" />
@@ -101,47 +94,79 @@
 <!--                app:layout_constraintEnd_toEndOf="parent"-->
 <!--                app:layout_constraintStart_toEndOf="@+id/btn_Data"-->
 <!--                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />-->
+            <TextView
+                android:id="@+id/textView_hora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Escolher Hora"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/btn_Hora"
+                app:layout_constraintStart_toStartOf="@+id/btn_Hora"
+                app:layout_constraintTop_toBottomOf="@+id/btn_Hora" />
+
+            <Button
+                android:id="@+id/btn_Hora"
+                android:layout_width="79dp"
+                android:layout_height="42dp"
+                android:layout_margin="16dp"
+                android:layout_marginTop="16dp"
+                android:drawableBottom="@drawable/ic_baseline_access_time"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="hora"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/btn_salvar"
+                app:layout_constraintHorizontal_bias="0.354"
+                app:layout_constraintStart_toStartOf="@+id/btn_salvar"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
             <Button
                 android:id="@+id/btn_Data"
                 android:layout_width="79dp"
                 android:layout_height="42dp"
                 android:layout_margin="16dp"
+                android:layout_marginTop="16dp"
                 android:background="@color/white"
                 android:drawableBottom="@drawable/ic_baseline_calendar"
+                android:gravity="center"
                 android:text="data"
-                app:layout_constraintEnd_toEndOf="@+id/btn_limpar"
-                app:layout_constraintHorizontal_bias="0.461"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/btn_limpar"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/btn_Data"
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
             <Button
                 android:id="@+id/btn_limpar"
-                android:layout_width="140dp"
-                android:layout_height="47dp"
+                android:layout_width="141dp"
+                android:layout_height="48dp"
                 android:layout_margin="32dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="112dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="48dp"
+                android:gravity="center"
                 android:text="Limpar"
-
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/btn_salvar"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.151"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.956" />
+                app:layout_constraintTop_toTopOf="@id/textView_data"
+                app:layout_constraintVertical_bias="1.0" />
 
             <Button
                 android:id="@+id/btn_salvar"
-                android:layout_width="123dp"
-                android:layout_height="42dp"
-                android:layout_margin="24dp"
-                android:layout_marginEnd="28dp"
+                android:layout_width="141dp"
+                android:layout_height="48dp"
+                android:layout_margin="32dp"
                 android:layout_marginBottom="48dp"
                 android:text="Salvar"
+                android:textStyle="bold"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTime"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+                app:layout_constraintVertical_bias="1.0" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

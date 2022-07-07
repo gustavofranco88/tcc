@@ -32,6 +32,10 @@ class AgendamentoFragment : Fragment() {
                 .show(childFragmentManager,"datePicker")
 
         }
+        mBinding.btnHora.setOnClickListener {
+            TimePickerFragment { result -> mBinding.textViewHora.text = result }
+                .show(childFragmentManager,"timePicker")
+        }
         mBinding.btnSalvar.setOnClickListener {
 
             novoAgendamento = Agendamento(
@@ -41,7 +45,7 @@ class AgendamentoFragment : Fragment() {
             novoAgendamento.telefone = mBinding.editTextPhoneAgendar.text.toString()
             novoAgendamento.servico = mBinding.editTextTextPersonName2.text.toString()
             novoAgendamento.data = mBinding.textViewData.text.toString()
-            novoAgendamento.hora = mBinding.editTextTime.text.toString()
+            novoAgendamento.hora = mBinding.textViewHora.text.toString()
 
 
 
@@ -67,7 +71,10 @@ class AgendamentoFragment : Fragment() {
 
             })
         }
-
+        mBinding.btnLimpar.setOnClickListener {
+            var nome = mBinding.editTextTextPersonNameNome.text.toString()
+                nome = ""
+        }
 
 
         return mBinding.root
