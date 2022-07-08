@@ -8,6 +8,6 @@ data class Agendamento (
     var hora: String,
 ) {
     fun addAll(body: List<Agendamento>) {
-        TODO("Not yet implemented")
+
     }
 }

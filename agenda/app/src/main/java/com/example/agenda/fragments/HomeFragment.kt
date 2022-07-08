@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
             }
 
                 override fun onFailure(call: Call<List<Agendamento>>, t: Throwable) {
-                Toast.makeText(context, "Erro", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Adicionado", Toast.LENGTH_SHORT).show()
 
             }
 

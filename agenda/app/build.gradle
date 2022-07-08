@@ -57,6 +57,6 @@ dependencies {
 
     implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
 
-    implementation 'com.github.T7Droid:Custom-Mask-for-EditText:1.0.0'
+
 
 }
